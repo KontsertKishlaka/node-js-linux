@@ -8,67 +8,41 @@
 
 **Студент:** Бедин Владислав
 
-**Исследуемая область:** Linux (Ubuntu). Node.js.
+**Исследуемая область:** Ubuntu (Linux), Node.js
 
-**Тема работа:** Основы клиент-серверной архитектуры.
+**Тема работы:** Простая программа на Node.js
 
 
-## 1. Инициализация проекта
+## 1. Создание простого сервера 
 
-#### Скачиваем nvm (Инструмент для управления версиями Node.js)
+
+## 2. Создание проекта. Добавление [package.json]() и установка зависимостей
+
+#### Создание проекта
 ```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+npm init
 ```
 
-#### Активируем скрипт nvm
-```bash
-source ~/.nvm/nvm.sh
-```
-
-#### Загружаем и устанавливаем Node.js
-```bash
-nvm install 22
-```
-
-#### Проверяем версию установленной Node.js
-```bash
-node -v
-```
-
-#### Проверяем версию npm
-```bash
-npm -v
-```
-
-![1  init-project](https://github.com/user-attachments/assets/f0d6ea74-c272-4d30-b2d1-79b257f6e910)
-
-
-## 2. Создание и запуск скрипта index.js
-
-#### Создание index.js
-```bash
-nano index.js
-```
-
-#### Запуск index.js
-```bash
-node index.js
-```
-
-![2  run-project](https://github.com/user-attachments/assets/27556777-53b1-4de4-8b3c-a3fb784be923)
-
-
-## 3. Установка зависимости `chalk` и обновление и запуск скрипта index.js
+#### Установка необходимых зависимостей
 
 ```bash
-npm install chalk
+npm i -S express hbs morgan winston
 ```
 
-![3  update-js-script](https://github.com/user-attachments/assets/3d221783-74c6-4e28-b868-9ecd4f8a309f)
+- **Express:** основной фреймворк, на котором будет написано приложение
+- **Hbs:** система визуализации (сокращение Handlebars)
+- **Morgan** и **Winston:** библиотеки для логирования приложения
 
 
-## 4. Финальный скрипт index.js (зелёный консольный вывод)
-![4  result-output](https://github.com/user-attachments/assets/aa0f69e3-8ec6-40c5-af7a-39a30f182bbe)
+## 3. Простое веб-приложение и финальные представления (views)
+ 
+#### Запрос: *http://localhost:8787/?username=Vlad%20Bedin* (index.hbs)
+#### Запрос: *http://localhost:8787/about* (about.hbs)
+#### Запрос: *http://localhost:8787/feedback* (feedback.hbs)
+#### Запрос: *http://localhost:8787/news* (news.hbs)
+
+
+## 4. Финальный скрипт index.js
 
 
 ## 5. Лицензия
